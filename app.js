@@ -1,12 +1,13 @@
-const fs = require("fs");
+const fs = require("fs"); // Importa modulo filesystem
 
 // Part 1 Read json file ===========================
-const rawdata = fs.readFileSync("explorers.json");
-const explorers = JSON.parse(rawdata);
+const rawdata = fs.readFileSync("explorers.json"); // Metodo para leer un archivo y regresar su contenido
+const explorers = JSON.parse(rawdata); // Analiza cadena de texto como JSON 
+//console.log(explorers)
 
 // Part 2: Get the quantity of explorers names in node
 const explorersInNode = explorers.filter((explorer) => explorer.mission == "node");
-//console.log(explorersInNode.length)
+console.log('Cantidad de explorers en node ' + explorersInNode.length)
 
 // Part4: Get the explorer's usernames in Node
 const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == "node");
