@@ -5,7 +5,7 @@ describe("Test para la clase ExplorerService", () => {
     const explorers = Reader.readJsonFile("test/explorers_test.json");
     test("Obtener la lista de explorer que estan en la mision node", () => {
         const result = ExplorerService.filterByMission(explorers, "node");
-        expect(result.length).toBe();
+        expect(result.length).toBe(2);
         expect(result).toEqual(
             expect.arrayContaining([
                 expect.objectContaining({
