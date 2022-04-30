@@ -1,9 +1,9 @@
 const Reader = require("../../lib/utils/Reader")
 const ExplorerService = require("../../lib/services/ExplorerService")
 
-describe("Test para la clase ExplorerService", () => {
-    const explorers = Reader.readJsonFile("test/explorers_test.json")
+describe("Test para la clase ExplorerService", () => {   
     test("Obtener la lista de explorer que estan en la mision node", () => {
+        const explorers = Reader.readJsonFile("test/explorers_test.json")
         const result = ExplorerService.filterByMission(explorers, "node")
         expect(result.length).toBe(2)
         expect(result).toEqual(
@@ -15,12 +15,14 @@ describe("Test para la clase ExplorerService", () => {
         )
     })
     test("Obtener la cantidad de explorers que estan en node", () => {
+        const explorers = Reader.readJsonFile("test/explorers_test.json")
         const result = ExplorerService.getAmountOfExplorersByMission(explorers, "node")
         expect(result).toBe(2)
     })
     test("Obtener la lista de usuarios de github de los explorers que estan en node", () => {
+        const explorers = Reader.readJsonFile("test/explorers_test.json")
         const result = ExplorerService.getExplorersUsernamesByMission(explorers, "node")
         expect(result).not.toBeUndefined()
-        expect(result[0]).toBe("ajolonauta1")        
+        expect(result[0]).toBe("EddYam")        
     })
 })
