@@ -20,7 +20,7 @@ describe("Pruebas de unidad para la clase ExplorerController", () => {
     });
 
     test("Regresa la cantidad de explorers en la mission enviada", () => {
-        const result = ExplorerController.getExplorersAmountByMission('node');
+        const result = ExplorerController.getExplorersAmountByMission("node");
         expect(result).toBe(10);
     });
 
@@ -30,5 +30,5 @@ describe("Pruebas de unidad para la clase ExplorerController", () => {
         expect(ExplorerController.getValidationInNumber(5)).toBe("BUZZ");
         expect(ExplorerController.getValidationInNumber(15)).toBe("FIZZBUZZ");
         expect(ExplorerController.getValidationInNumber(7)).toBe(7);
-    })
+    });
 });

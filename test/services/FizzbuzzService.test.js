@@ -27,5 +27,5 @@ describe("Test para la clase FizzbuzzService", () => {
         expect(FizzbuzzService.applyValidationInNumber(5)).toBe("BUZZ");
         expect(FizzbuzzService.applyValidationInNumber(15)).toBe("FIZZBUZZ");
         expect(FizzbuzzService.applyValidationInNumber(7)).toBe(7);
-    })
+    });
 });
