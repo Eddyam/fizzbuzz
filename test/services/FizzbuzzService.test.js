@@ -23,7 +23,7 @@ describe("Test para la clase FizzbuzzService", () => {
     });
     test("Validar para funcionalidad applyValidationInNumber", () => {
         expect(FizzbuzzService.applyValidationInNumber(1)).toBe(1);
-        expect(FizzbuzzService.applyValidationInNumber(3)).toBe("FIZZ");
+        expect(FizzbuzzService.applyValidationInNumber(3)).toBe("FIZZ1");
         expect(FizzbuzzService.applyValidationInNumber(5)).toBe("BUZZ");
         expect(FizzbuzzService.applyValidationInNumber(15)).toBe("FIZZBUZZ");
         expect(FizzbuzzService.applyValidationInNumber(7)).toBe(7);
