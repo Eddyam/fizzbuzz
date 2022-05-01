@@ -23,4 +23,12 @@ describe("Pruebas de unidad para la clase ExplorerController", () => {
         const result = ExplorerController.getExplorersAmountByMission('node');
         expect(result).toBe(10);
     });
+
+    test("Validar para funcionalidad getValidationInNumber", () => {
+        expect(ExplorerController.getValidationInNumber(1)).toBe(1);
+        expect(ExplorerController.getValidationInNumber(3)).toBe("FIZZ");
+        expect(ExplorerController.getValidationInNumber(5)).toBe("BUZZ");
+        expect(ExplorerController.getValidationInNumber(15)).toBe("FIZZBUZZ");
+        expect(ExplorerController.getValidationInNumber(7)).toBe(7);
+    })
 });
